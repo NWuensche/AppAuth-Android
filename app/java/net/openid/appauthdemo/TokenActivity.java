@@ -314,7 +314,7 @@ public class TokenActivity extends AppCompatActivity {
         mStateManager.updateAfterTokenResponse(tokenResponse, authException);
         if (!mStateManager.getCurrent().isAuthorized()) {
             final String message = "Authorization Code exchange failed"
-                    + ((authException != null) ? authException.error : "");
+                    + ((authException != null) ? " " + authException.error : "");
 
             // WrongThread inference is incorrect for lambdas
             //noinspection WrongThread
