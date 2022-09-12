@@ -560,7 +560,7 @@ public class AuthState {
         if (mRefreshToken == null) {
             AuthorizationException ex = AuthorizationException.fromTemplate(
                     AuthorizationRequestErrors.CLIENT_ERROR,
-                    new IllegalStateException("No refresh token available and token have expired"));
+                    new IllegalStateException("No refresh token available and token has expired"));
             action.execute(null, null, ex);
             return;
         }
